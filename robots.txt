@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maxwellchunk2010-droid.github.io/tierstack/sitemap.xml
