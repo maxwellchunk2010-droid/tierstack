@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TierStack — The tier list for AI tools</title>
+<meta name="description" content="The tier list for AI tools: what to use for each job, tested by builders, updated when the meta changes.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+  <a class="logo" href="index.html">Tier<span>Stack</span></a>
+  <nav>
+    <a href="rankings.html" >Rankings</a>
+    <a href="releases.html">Patch Notes</a>
+    <a href="how-we-rank.html">How We Rank</a>
+    <a href="sponsors.html">Sponsors</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow">For vibe coders &amp; builders</span>
+    <h1>The tier list for AI tools: <em>what to use for each job.</em></h1>
+    <p class="lead">Tested by builders, updated when the meta changes. No directory of thousands — just a clear pick for each use case, in S / A / B / C tiers.</p>
+    <a class="btn primary" href="rankings.html">See the tier lists</a>
+    <a class="btn ghost" href="how-we-rank.html">How we rank</a>
+    <div class="notice"><strong>Prototype honesty note:</strong> All tiers below are <strong>Editorial v0 — hands-on testing in progress</strong>. Nothing here pretends to be tested yet. No invented prices, scores, or review-site ratings.</div>
+  </section>
+
+  <section id="categories">
+    <h2>The 6 launch categories</h2>
+    <p class="sub">The launch wedge from the TierStack blueprint: coding, app building, your deploy stack, chat, agents, and game dev.</p>
+    <div class="grid" id="category-grid"></div>
+  </section>
+
+  <section id="new">
+    <h2>New releases / Patch Notes</h2>
+    <p class="sub">A feed of new tools and major updates, each with one question: does this change the meta? Entries below are labelled example entries for this prototype — no fabricated dates or version numbers.</p>
+    <div class="feed" id="home-feed"></div>
+    <p style="margin-top:16px"><a class="btn ghost" href="releases.html">See all Patch Notes</a></p>
+  </section>
+
+  <section id="featured-partner" aria-label="Featured partner">
+    <div class="sponsor-slot">
+      <span class="sponsor-label">Sponsored &middot; Featured / Partner</span>
+      <h2>Featured / Partner slot</h2>
+      <p class="sub" style="margin-bottom:12px">This slot sits <strong style="color:var(--text)">outside every tier list</strong> and is always labelled Sponsored. It never affects a tier, verdict, or test score. It is currently empty.</p>
+      <p style="color:var(--muted)">Want to reach vibe coders &amp; builders here? See the <a href="sponsors.html">Sponsors media kit</a> and contact <a href="mailto:partners@tierstack.example">partners@tierstack.example</a> <span class="pill">Placeholder email (.example) &mdash; not live yet</span></p>
+    </div>
+  </section>
+  <section>
+    <div class="newsletter">
+      <p class="kicker">Newsletter</p>
+      <h2>The weekly Meta Report</h2>
+      <p class="sub" style="margin-bottom:0">What moved up or down, the top releases, and one deep dive. Prototype placeholder — the form below is not connected.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="you@example.com" aria-label="Email address" disabled>
+        <button class="btn primary" type="submit">Get the Meta Report</button>
+        <p class="form-msg" style="width:100%;color:var(--muted);margin:6px 0 0"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <p><strong style="color:var(--text)">TierStack</strong> — prototype. Paying never changes a rank. Rankings will be set by published, same-task test scores; see <a href="how-we-rank.html">How we rank</a>.</p>
+  <p>Editorial v0 — hands-on testing in progress. Some links are affiliate/referral links (currently Railway); most tool links go to official sites. Rankings are never for sale.</p>
+  <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this site are affiliate/referral links (currently Railway); rankings are never for sale. Paying never changes a rank. If you use an affiliate/referral link, TierStack may earn a commission or credit at no extra cost to you &mdash; and tools without affiliate programmes get the same treatment. See <a href="sponsors.html">Sponsors &amp; disclosure</a>.</p>
+</div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
