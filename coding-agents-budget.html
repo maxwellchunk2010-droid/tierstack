@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best AI Coding Agent on a Budget ($10–30/month) &amp; How to Handle Rate Limits — TierStack</title>
+<meta name="description" content="Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Devin Desktop, Cline, Aider and Zed compared for a $10–30/month budget: plan prices, how rate limits work, a pick per use case, and the two-agent routing setup.">
+<link rel="canonical" href="https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TierStack">
+<meta property="og:title" content="Best AI coding agent on a budget ($10–30/month) and how to handle rate limits">
+<meta property="og:description" content="Plan prices and rate-limit rules from official pages, a pick per budget, and the run-two-agents-and-route-by-task setup.">
+<meta property="og:url" content="https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Article","headline":"Best AI coding agent on a budget ($10-30/month) and how to handle rate limits","description":"Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Devin Desktop, Cline, Aider and Zed compared for a $10-30/month budget, with official pricing sources checked 2026-10-19.","datePublished":"2026-10-19","dateModified":"2026-10-19","author":{"@type":"Organization","name":"TierStack"},"publisher":{"@type":"Organization","name":"TierStack","url":"https://maxwellchunk2010-droid.github.io/tierstack/"},"mainEntityOfPage":"https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the best AI coding agent for $10 a month?","acceptedAnswer":{"@type":"Answer","text":"GitHub Copilot Pro ($10/month) is the pick: unlimited code completions on paid plans plus a monthly allowance of GitHub AI Credits for chat, agent mode and the CLI. Zed Pro ($10/month, $5 of tokens included) is the alternative if you want Zed as your editor. Prices checked 2026-10-19 on official pages."}},
+{"@type":"Question","name":"What is the best AI coding agent for $20 a month?","acceptedAnswer":{"@type":"Answer","text":"Claude Code via Claude Pro ($20/month, or $17/month billed annually) or OpenAI Codex via ChatGPT Plus ($20/month). Both use rolling five-hour usage windows with weekly limits on top. Pick one as your main agent."}},
+{"@type":"Question","name":"How do I handle AI coding agent rate limits on a budget?","acceptedAnswer":{"@type":"Answer","text":"Run two agents from different vendors and route by task: heavy multi-file work on your main agent, quick edits and questions on a second plan. Use smaller models for routine tasks, keep context and MCP servers lean, check remaining usage (for example /status in Codex CLI), and only then consider pay-as-you-go credits or API keys."}},
+{"@type":"Question","name":"Are Cline and Aider free?","acceptedAnswer":{"@type":"Answer","text":"The tools are free and open source (Aider is Apache-2.0; Cline is free for individual developers). You pay for model inference, either through your own API keys or, for Cline, its usage-based provider. Cost depends on the model you choose; check the model provider's official pricing."}},
+{"@type":"Question","name":"Does paying change TierStack rankings?","acceptedAnswer":{"@type":"Answer","text":"No. Rankings never change for money. Some links on the site are affiliate/referral links (currently Railway), which are disclosed."}}
+]}]}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+  <a class="logo" href="index.html">Tier<span>Stack</span></a>
+  <nav>
+    <a href="rankings.html">Rankings</a>
+    <a href="releases.html">Patch Notes</a>
+    <a href="coding-agents-budget.html" class="active">Budget Coding Agents</a>
+    <a href="how-we-rank.html">How We Rank</a>
+    <a href="sponsors.html">Sponsors</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero" style="padding-bottom:10px">
+    <span class="eyebrow">Guide &middot; AI Coding Agents</span>
+    <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Best AI coding agent on a budget ($10&ndash;30/month) and how to handle rate limits</h1>
+    <p class="lead">Eight coding agents, one budget. Prices and limit rules below come only from each vendor's official pricing or docs page, checked <strong>2026-10-19</strong>. Prices change often &mdash; always check official pricing before you buy.</p>
+    <div class="notice"><strong>Editorial guide, not test scores.</strong> Picks are an editorial view while hands-on testing is in progress. Prices exclude tax. Where we could not verify a fact on an official page, we say &ldquo;check official pricing&rdquo;.</div>
+  </section>
+
+  <section>
+    <h2>The short answer: pick by budget</h2>
+    <div class="grid">
+      <article class="card"><p class="kicker">$0</p><h3>Cline or Aider + your own keys</h3><p>Free, open-source agents. You pay only for model usage, so cost scales with how much you run. Good for light or bursty use. Zed Personal is also free with your own keys or external agents.</p></article>
+      <article class="card"><p class="kicker">$10/month</p><h3>GitHub Copilot Pro</h3><p>Unlimited code completions on paid plans, plus a monthly AI Credits allowance for chat, agent mode and Copilot CLI. Alternative: Zed Pro ($10, $5 of tokens included) if you live in Zed.</p></article>
+      <article class="card"><p class="kicker">$20/month</p><h3>Claude Code (Claude Pro) or Codex (ChatGPT Plus)</h3><p>The strongest main-agent value at this price. Both meter on rolling five-hour windows with weekly limits. Devin Desktop Pro ($20) is the IDE-first alternative.</p></article>
+      <article class="card"><p class="kicker">$30/month</p><h3>Two agents: a $20 main + Copilot Pro</h3><p>Claude Pro or ChatGPT Plus as the main agent, plus Copilot Pro for completions and overflow. Two vendors means two separate limit pools. If you want one IDE instead, Cursor Premium is $30.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Run two agents and route by task</h2>
+    <p>The setup many builders use on a budget: pay for two agents from different vendors instead of one bigger plan, then route each task to the one that fits. Because each vendor has its own usage pool and reset clock, hitting a limit on one doesn't stop your day.</p>
+    <ul>
+      <li><strong>Main agent (Claude Code or Codex):</strong> multi-file features, refactors, debugging sessions &mdash; the work that needs the best model.</li>
+      <li><strong>Second agent (Copilot Pro, or the other $20 plan):</strong> completions, small edits, quick questions, code review, and anything you run while the main agent's window resets.</li>
+      <li><strong>Pay-per-use fallback (Cline or Aider with an API key):</strong> a burst of extra work in a crunch, with a spend cap set at the provider.</li>
+    </ul>
+    <p>Rules of thumb: use a smaller model for routine tasks, keep prompts and attached files tight, trim large AGENTS.md files and unused MCP servers (OpenAI and Devin both list these tips), and check remaining usage before starting a long task.</p>
+  </section>
+
+  <section>
+    <h2>Each tool: price and how limits work</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tool</th><th>Budget-relevant plans</th><th>How limits work</th><th>When you hit the limit</th><th>Source (checked)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cursor</strong></td><td>Free (limited); Plus $8/mo (Grok models only); Premium $30/mo (4x Plus usage)</td><td>One AI usage pool shared across Cursor and Grok; allowance refreshes weekly. Third-party models are not in the allowance and are billed at API list price on Premium and above.</td><td>Buy top-offs or wait for the weekly refresh; spending caps available.</td><td><a href="https://cursor.com/pricing" target="_blank" rel="noopener">cursor.com/pricing</a> (2026-10-19)</td></tr>
+        <tr><td><strong>Claude Code</strong></td><td>Included with Claude Pro: $20/mo monthly, $17/mo billed annually. Max from $100/mo.</td><td>Rolling five-hour session window plus weekly limits on paid plans; Claude Code and chat share one pool. No fixed message count.</td><td>Wait for reset, upgrade, or turn on usage credits at API rates.</td><td><a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a> (2026-10-19)</td></tr>
+        <tr><td><strong>OpenAI Codex</strong></td><td>ChatGPT Go $8/mo (desktop app, GPT-6 Luna, subject to rollout); Plus $20/mo (web, CLI, IDE, cloud features)</td><td>Plus: estimated local messages per five hours vary by model (e.g. GPT-6.1 Sol 15&ndash;160, GPT-6 Luna 350&ndash;3,000); weekly limits may also apply. Fast mode uses limits 2.5x faster.</td><td>Buy ChatGPT credits, or run local chats with an API key at API rates. Check remaining usage with <code>/status</code>.</td><td><a href="https://developers.openai.com/codex/pricing" target="_blank" rel="noopener">developers.openai.com/codex/pricing</a> (2026-10-19)</td></tr>
+        <tr><td><strong>GitHub Copilot</strong></td><td>Free (2,000 completions, 50 chat requests); Pro $10/mo ($15 of AI Credits: $10 base + $5 flex); Pro+ $39/mo</td><td>Monthly GitHub AI Credits (1 credit = $0.01) for chat, agent mode, cloud agent, CLI. Completions don't use credits and are unlimited on paid plans. Resets monthly.</td><td>Wait for the next cycle, set a paid-usage budget, or switch to a cheaper model.</td><td><a href="https://github.com/features/copilot/plans" target="_blank" rel="noopener">github.com/features/copilot/plans</a> (2026-10-19)</td></tr>
+        <tr><td><strong>Devin Desktop</strong> (formerly Windsurf)</td><td>Free (light quota); Pro $20/mo; Max $200/mo</td><td>Usage allowance that refreshes daily and weekly; cost per message varies by model and task. Unlimited Tab completions on all plans.</td><td>Buy extra usage at API pricing (paid plans).</td><td><a href="https://devin.ai/pricing" target="_blank" rel="noopener">devin.ai/pricing</a> (2026-10-19)</td></tr>
+        <tr><td><strong>Cline</strong></td><td>Free open-source extension for individuals; no subscription</td><td>No plan limits of its own &mdash; you pay for inference per use via the Cline provider or your own API keys. Limits are whatever your model provider sets.</td><td>Depends on your provider. Check official pricing for the model you use.</td><td><a href="https://cline.bot/pricing" target="_blank" rel="noopener">cline.bot/pricing</a> (2026-10-19)</td></tr>
+        <tr><td><strong>Aider</strong></td><td>Free, open source (Apache-2.0)</td><td>Connects to most LLMs with your own keys; cost and rate limits come from your model provider.</td><td>Depends on your provider. Check official pricing.</td><td><a href="https://aider.chat/docs/llms.html" target="_blank" rel="noopener">aider.chat docs</a>, <a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener">GitHub license</a> (2026-10-19)</td></tr>
+        <tr><td><strong>Zed</strong></td><td>Personal $0 (your own keys or external agents like Claude Agent and Codex CLI); Pro $10/mo with $5 of tokens</td><td>Pro: unlimited edit predictions; hosted model usage beyond $5 billed at API list price +10%.</td><td>Usage-based billing continues; set a spending cap.</td><td><a href="https://zed.dev/pricing" target="_blank" rel="noopener">zed.dev/pricing</a> (2026-10-19)</td></tr>
+      </tbody>
+    </table></div>
+    <p class="sub">Exact message counts, weekly caps and credit burn rates are not published as fixed numbers by most vendors &mdash; check official pricing and your usage dashboard.</p>
+  </section>
+
+  <section>
+    <h2>Pick by use case</h2>
+    <div class="grid">
+      <article class="card"><h3>Mostly autocomplete, some chat</h3><p>Copilot Pro ($10). Completions don't touch your credits.</p></article>
+      <article class="card"><h3>Terminal-first agent work</h3><p>Claude Code (Claude Pro) or Codex CLI (ChatGPT Plus), $20.</p></article>
+      <article class="card"><h3>One AI IDE, nothing else</h3><p>Devin Desktop Pro ($20) or Cursor Premium ($30). Note Cursor's third-party models are billed separately at API list price.</p></article>
+      <article class="card"><h3>Irregular use, want control</h3><p>Cline or Aider with your own key and a provider spend cap, or Zed with your own keys.</p></article>
+      <article class="card"><h3>Hit limits daily</h3><p>Two vendors, route by task (above) &mdash; usually cheaper than jumping to a $100+ tier.</p></article>
+    </div>
+    <p style="margin-top:14px">See the full <a href="rankings.html?cat=coding-agents">AI coding agents tier list</a> and <a href="how-we-rank.html">how we rank</a>.</p>
+  </section>
+
+  <section>
+    <h2>FAQ</h2>
+    <h3>What's the best AI coding agent for $10 a month?</h3><p>GitHub Copilot Pro; Zed Pro if you want Zed as your editor.</p>
+    <h3>What's the best for $20 a month?</h3><p>Claude Code via Claude Pro or Codex via ChatGPT Plus. Pick one as your main agent.</p>
+    <h3>How do I stop hitting rate limits?</h3><p>Route by task across two vendors, use smaller models for routine work, keep context lean, and watch your usage dashboard. Pay-as-you-go credits or API keys are the last resort.</p>
+    <h3>Are Cline and Aider really free?</h3><p>The tools are free; model usage is not. Check official pricing for the model provider you use.</p>
+    <h3>Does paying change these picks?</h3><p>No. Rankings and picks never change for money.</p>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <p><strong style="color:var(--text)">TierStack</strong> — prototype. <a href="rankings.html">Rankings</a> &middot; <a href="how-we-rank.html">How we rank</a></p>
+  <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this site are affiliate/referral links (currently Railway); rankings are never for sale. Paying never changes a rank. If you use an affiliate/referral link, TierStack may earn a commission or credit at no extra cost to you &mdash; and tools without affiliate programmes get the same treatment. See <a href="sponsors.html">Sponsors &amp; disclosure</a>.</p>
+</div></footer>
+</body>
+</html>

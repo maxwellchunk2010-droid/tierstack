@@ -27,8 +27,10 @@
     var items = limit ? data.releases.slice(0, limit) : data.releases;
     return items.map(function (r) {
       return '<article class="feed-item"><span class="pill watch">Meta impact: ' + esc(r.metaImpact) + '</span>' +
-        '<h3>' + esc(r.title) + '</h3><p class="meta" style="color:var(--muted)">' + esc(r.category) + ' &middot; Example feed entry for prototype</p>' +
-        '<p>' + esc(r.summary) + '</p><p class="take">' + esc(r.take) + '</p></article>';
+        '<h3>' + esc(r.title) + '</h3><p class="meta" style="color:var(--muted)">' + esc(r.category) + (r.date ? ' &middot; ' + esc(r.date) : '') + '</p>' +
+        '<p>' + esc(r.summary) + '</p><p class="take">' + esc(r.take) + '</p>' +
+        ((r.sources && r.sources.length) ? '<p class="meta" style="color:var(--muted)">Source: ' + r.sources.map(function (u) { return '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u.replace(/^https?:\/\//, '')) + '</a>'; }).join(' &middot; ') + '</p>' : '') +
+        '</article>';
     }).join("");
   }
   var homeFeed = $("#home-feed");

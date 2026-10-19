@@ -101,48 +101,14 @@ window.TIERSTACK_DATA = {
     { name: "Ludo.ai", category: "game-dev", tier: "B", bestFor: "Game ideation, research, and assets", verdict: "Pick this if you want help at the concept and market-research stage of a game, before production.", url: "https://ludo.ai" }
   ],
   releases: [
-    {
-      title: "Coding agents keep moving into the terminal and the cloud",
-      category: "AI Coding Agents / IDEs",
-      metaImpact: "Watch",
-      summary: "Example feed entry for the prototype: major coding tools continue adding agentic, multi-file and delegated-task workflows alongside editor-based chat.",
-      take: "Does this change the meta? Watch — the editor-vs-terminal split is the comparison to test hands-on, not a headline to trust."
-    },
-    {
-      title: "Prompt-to-app builders push on databases and deployment",
-      category: "Prompt-to-App Builders",
-      metaImpact: "Watch",
-      summary: "Example feed entry for the prototype: app builders keep bundling more of the stack — database, auth, and hosting — so a prompt gets closer to a shipped product.",
-      take: "Does this change the meta? Watch — deploy success and code export on the same test app will decide, once tested."
-    },
-    {
-      title: "Chat assistants add deeper research and agent modes",
-      category: "General Chat Assistants",
-      metaImpact: "Watch",
-      summary: "Example feed entry for the prototype: general assistants continue rolling out multi-step research and task-completing agent features next to normal chat.",
-      take: "Does this change the meta? Watch — run the fixed 10-prompt set and check citations before moving any tier."
-    },
-    {
-      title: "Automation platforms add AI agent building blocks",
-      category: "Agent Frameworks & Automation",
-      metaImpact: "Watch",
-      summary: "Example feed entry for the prototype: workflow platforms keep adding AI steps and agent nodes on top of classic trigger-and-action automation.",
-      take: "Does this change the meta? Watch — the same form-to-notification workflow, timed on each platform, is the real test."
-    },
-    {
-      title: "AI 3D tools focus on cleaner, game-ready output",
-      category: "AI for Game Dev",
-      metaImpact: "Watch",
-      summary: "Example feed entry for the prototype: 3D generation tools keep marketing faster generation and cleaner meshes aimed at real game pipelines.",
-      take: "Does this change the meta? Watch — nothing moves until a generated prop survives import into Unity or Godot without heavy cleanup."
-    },
-    {
-      title: "Backend platforms court vibe coders directly",
-      category: "Vibe-Coder Backend & Deploy Stack",
-      metaImpact: "Watch",
-      summary: "Example feed entry for the prototype: database, auth, and hosting platforms increasingly pitch one-click setup for AI-built apps and agent-generated code.",
-      take: "Does this change the meta? Watch — setup time from a starter app to a public, authenticated deploy is the metric to measure."
-    }
+    { title: "Cursor: cloud agents can build shareable interactive canvases; environments support up to 300 repos with faster loading", date: "Oct 16, 2026", category: "AI Coding Agents / IDEs", metaImpact: "Watch", summary: "Cursor cloud agents can now build shareable interactive canvases, and environments support up to 300 repos with faster loading (per the Cursor changelog).", take: "Does this change the meta? Watch — editorial verdict until hands-on tests exist. No tier change.", sources: ["https://rulefiles.dev/digest/2026-W42/"] },
+    { title: "Codex CLI 0.163.0: steer responses mid-thought, searchable /config; GPT-5.5 retired from Codex for ChatGPT sign-ins", date: "Oct 15, 2026 (CLI) · Oct 14, 2026 (GPT-5.5 retirement)", category: "AI Coding Agents / IDEs", metaImpact: "Watch", summary: "Codex CLI 0.163.0 lets you steer responses mid-thought and adds a searchable /config. Separately, GPT-5.5 was retired from Codex for ChatGPT sign-ins.", take: "Does this change the meta? Watch — editorial verdict until hands-on tests exist. No tier change.", sources: ["https://rulefiles.dev/digest/2026-W42/"] },
+    { title: "Claude Code 2.1.299–2.1.303: unattended retries stop cleanly at usage limits, auto-mode classifier model setting, reliability fixes", date: "Oct 14–18, 2026", category: "AI Coding Agents / IDEs", metaImpact: "No", summary: "Unattended retries now stop cleanly at usage limits, there is a setting for the auto-mode classifier model, and a batch of reliability fixes.", take: "Does this change the meta? No — incremental. No tier change.", sources: ["https://www.havoptic.com/"] },
+    { title: "GitHub Copilot: Gemini 4 Argon GA, agentic autofix for code scanning GA, some models deprecated mid-November", date: "Oct 13 & Oct 15, 2026", category: "AI Coding Agents / IDEs", metaImpact: "Watch", summary: "Gemini 4 Argon is generally available in Copilot (Oct 13); agentic autofix for code scanning is GA (Oct 15); some models are being deprecated mid-November.", take: "Does this change the meta? Watch — editorial verdict until hands-on tests exist. No tier change.", sources: ["https://github.blog/changelog/month/10-2026/"] },
+    { title: "Lovable adds built-in AI models and tools for the apps you build", date: "Oct 15, 2026", category: "Prompt-to-App Builders", metaImpact: "Watch", summary: "Apps built in Lovable can use built-in AI models and tools, including GPT-Live, Claude, Gemini 4 Argon, Perplexity, Firecrawl and more.", take: "Does this change the meta? Watch — matters for \"AI inside the app\" builds. No tier change.", sources: ["https://lovable.dev/blog/ai-models-and-tools-in-lovable"] },
+    { title: "Replit: cross-project chat, Windows desktop private preview; Bring Your Own Cloud for enterprise", date: "Oct 9 & Oct 16, 2026", category: "Prompt-to-App Builders", metaImpact: "Watch", summary: "Replit added cross-project chat and a Windows desktop private preview (Oct 9), and Bring Your Own Cloud for enterprise (Oct 16).", take: "Does this change the meta? Watch — BYOC is enterprise-only. No tier change.", sources: ["https://docs.replit.com/updates/2026/10/09/changelog", "https://replit.com/blog/bring-your-own-cloud"] },
+    { title: "Bolt: pin comments on your project preview and send them to Bolt as prompts", date: "Week of Oct 5–11, 2026", category: "Prompt-to-App Builders", metaImpact: "No", summary: "You can pin comments on a Bolt project preview and send them to Bolt as prompts.", take: "Does this change the meta? No. No tier change.", sources: ["https://support.bolt.new/release-notes"] },
+    { title: "Windsurf is now Devin Desktop", date: "Jun 2, 2026 (Cascade removed Sep 8, 2026)", category: "AI Coding Agents / IDEs", metaImpact: "Watch", summary: "Windsurf was renamed Devin Desktop on Jun 2, 2026, and Cascade was removed on Sep 8, 2026. Already corrected in our rankings data.", take: "Does this change the meta? Watch — editorial verdict; name already updated in rankings. No tier change.", sources: ["https://devin.ai/blog/windsurf-is-now-devin-desktop"] }
   ],
   criteria: [
     { name: "Output quality", weight: 35, description: "Results on our standard, published test tasks — the same task for every tool in a category." },
