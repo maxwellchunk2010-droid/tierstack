@@ -54,7 +54,7 @@ window.TIERSTACK_DATA = {
     { name: "Cursor", category: "coding-agents", tier: "S", bestFor: "Daily AI-first coding in a full IDE", verdict: "Pick this if you want an AI-first editor as your main daily driver.", url: "https://cursor.com" },
     { name: "Claude Code", category: "coding-agents", tier: "S", bestFor: "Terminal-driven, multi-file repo work", verdict: "Pick this if you are comfortable in the terminal and want an agent working across a whole repo.", url: "https://claude.com" },
     { name: "GitHub Copilot", category: "coding-agents", tier: "A", bestFor: "Teams already living on GitHub", verdict: "Pick this if your team is on GitHub and wants AI help inside your existing editor and workflow.", url: "https://github.com/features/copilot" },
-    { name: "Windsurf", category: "coding-agents", tier: "A", bestFor: "An AI-first IDE alternative to Cursor", verdict: "Pick this if you want an agentic IDE and want to compare editors before committing.", url: "https://windsurf.com" },
+    { name: "Devin Desktop (formerly Windsurf)", category: "coding-agents", tier: "A", bestFor: "An agent-first IDE alternative to Cursor", verdict: "Pick this if you want a full IDE built around managing local and cloud coding agents, and want to compare editors before committing.", url: "https://devin.ai/desktop" },
     { name: "OpenAI Codex", category: "coding-agents", tier: "A", bestFor: "Delegating coding tasks to a cloud agent", verdict: "Pick this if you want to hand off well-scoped tasks and review the result, rather than pair in an editor.", url: "https://openai.com" },
     { name: "Cline", category: "coding-agents", tier: "B", bestFor: "Bring-your-own-model coding in VS Code", verdict: "Pick this if you want an open, model-flexible agent inside VS Code and control over which model you pay for.", url: "https://cline.bot" },
     { name: "Aider", category: "coding-agents", tier: "B", bestFor: "Open-source, git-native terminal pairing", verdict: "Pick this if you want a lightweight open-source terminal pair programmer with tight git integration.", url: "https://aider.chat" },
@@ -63,7 +63,7 @@ window.TIERSTACK_DATA = {
     // --- Prompt-to-App Builders ---
     { name: "Lovable", category: "app-builders", tier: "S", bestFor: "Prompt-to-full-stack app, fast", verdict: "Pick this if you want to go from an idea to a working full-stack app by describing it.", url: "https://lovable.dev" },
     { name: "Bolt.new", category: "app-builders", tier: "A", bestFor: "Building and iterating in the browser", verdict: "Pick this if you want to build, edit, and deploy a web app entirely in the browser.", url: "https://bolt.new" },
-    { name: "v0 by Vercel", category: "app-builders", tier: "A", bestFor: "Generating polished web UIs and apps", verdict: "Pick this if UI quality matters most and your stack leans toward Vercel / Next.js.", url: "https://v0.dev" },
+    { name: "v0 by Vercel", category: "app-builders", tier: "A", bestFor: "Generating polished web UIs and apps", verdict: "Pick this if UI quality matters most and your stack leans toward Vercel / Next.js.", url: "https://v0.app" },
     { name: "Replit Agent", category: "app-builders", tier: "A", bestFor: "Idea-to-deployed app inside Replit", verdict: "Pick this if you want building, hosting, and deploying handled in one place.", url: "https://replit.com" },
     { name: "Firebase Studio", category: "app-builders", tier: "B", bestFor: "App building inside the Firebase ecosystem", verdict: "Pick this if your app will live on Firebase / Google Cloud and you want that integration from the start.", url: "https://firebase.google.com" },
 
@@ -73,7 +73,7 @@ window.TIERSTACK_DATA = {
     { name: "Clerk", category: "backend-deploy", tier: "A", bestFor: "Drop-in authentication and user management", verdict: "Pick this if you want polished sign-in, sign-up, and user management without building auth yourself.", url: "https://clerk.com" },
     { name: "Firebase", category: "backend-deploy", tier: "A", bestFor: "Google-backed backend for web and mobile", verdict: "Pick this if you want a mature all-in-one backend, especially for mobile or realtime apps.", url: "https://firebase.google.com" },
     { name: "Netlify", category: "backend-deploy", tier: "A", bestFor: "Deploying static sites and Jamstack apps", verdict: "Pick this if you are deploying a frontend / Jamstack site and want a simple, established host.", url: "https://www.netlify.com" },
-    { name: "Neon", category: "backend-deploy", tier: "B", bestFor: "Serverless Postgres on its own", verdict: "Pick this if you want serverless Postgres you can pair with any frontend or auth provider.", url: "https://neon.tech" },
+    { name: "Neon", category: "backend-deploy", tier: "B", bestFor: "Serverless Postgres on its own", verdict: "Pick this if you want serverless Postgres you can pair with any frontend or auth provider.", url: "https://neon.com" },
     { name: "Railway", category: "backend-deploy", tier: "B", bestFor: "Deploying backends and services simply", verdict: "Pick this if you need to deploy a backend service, worker, or database without cloud-console complexity.", url: "https://railway.com?referralCode=KpJteX" },
 
     // --- General Chat Assistants ---
