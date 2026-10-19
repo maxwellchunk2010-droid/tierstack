@@ -19,6 +19,7 @@ TierStack publishes S / A / B / C tier lists for AI coding agents, prompt-to-app
 - [How we rank](https://maxwellchunk2010-droid.github.io/tierstack/how-we-rank.html): methodology and honesty rules
 - [Patch Notes](https://maxwellchunk2010-droid.github.io/tierstack/releases.html): dated, sourced releases and meta-changing updates
 - [Best AI coding agent on a budget](https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html): $10-30/month picks across Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Devin Desktop (formerly Windsurf), Cline, Aider and Zed, how each plan's rate limits work, and the run-two-agents-and-route-by-task setup. Prices from official pages, checked 2026-10-19.
+- [Best AI app builder for vibe coders](https://maxwellchunk2010-droid.github.io/tierstack/best-ai-app-builder.html): Lovable, Bolt.new, v0, Replit and Firebase Studio (sunsetting; closed to new users) compared with official plan facts checked 2026-10-19, a pick per use case, and where to deploy after (Railway, referral).
 - [Sponsors](https://maxwellchunk2010-droid.github.io/tierstack/sponsors.html): labelled sponsor slots only; ranks are never for sale
 
 ## Optional

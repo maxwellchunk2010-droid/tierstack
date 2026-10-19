@@ -117,12 +117,23 @@
     render();
   }
 
-  // Newsletter placeholders: never submit anywhere
+  // Newsletter: keyless mailto signup (static site, no API key in public code)
   Array.prototype.forEach.call(document.querySelectorAll("form.newsletter-form"), function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      var input = form.querySelector("input[type=email]");
+      var email = input ? input.value.trim() : "";
+      var body = "Please add " + (email || "my address") + " to TierStack Patch Notes.";
       var msg = form.querySelector(".form-msg");
-      if (msg) msg.textContent = "Prototype only — this form is not connected and nothing was saved or sent.";
+      if (msg) msg.textContent = "Opening your email app — send the pre-filled message to finish subscribing.";
+      window.location.href = "mailto:maxwellchunk2010@gmail.com?subject=" + encodeURIComponent("Subscribe TierStack Patch Notes") + "&body=" + encodeURIComponent(body);
     });
+  });
+
+  // Tool links reused from data.js (single source of truth, e.g. Railway referral)
+  Array.prototype.forEach.call(document.querySelectorAll("a[data-tool-link]"), function (a) {
+    var name = a.getAttribute("data-tool-link");
+    var t = (data.tools || []).filter(function (x) { return x.name === name; })[0];
+    if (t && t.url) a.href = t.url;
   });
 })();
