@@ -1,0 +1,74 @@
+# TierStack — full tier lists
+
+> Every current TierStack tier placement in plain text, generated from the site's data file. Editorial v0 — hands-on testing in progress. These are starting editorial placements, not hands-on test scores. Paying never changes a rank. Some links are affiliate or referral links (currently Railway).
+
+Rankings page: https://maxwellchunk2010-droid.github.io/tierstack/rankings.html
+Methodology: https://maxwellchunk2010-droid.github.io/tierstack/how-we-rank.html
+
+## AI Coding Agents / IDEs
+
+Agents and AI-first editors that write, edit, and debug code inside real repos.
+
+- S tier: [Cursor](https://cursor.com). Best for: Daily AI-first coding in a full IDE. Pick this if you want an AI-first editor as your main daily driver.
+- S tier: [Claude Code](https://claude.com). Best for: Terminal-driven, multi-file repo work. Pick this if you are comfortable in the terminal and want an agent working across a whole repo.
+- A tier: [GitHub Copilot](https://github.com/features/copilot). Best for: Teams already living on GitHub. Pick this if your team is on GitHub and wants AI help inside your existing editor and workflow.
+- A tier: [Devin Desktop (formerly Windsurf)](https://devin.ai/desktop). Best for: An agent-first IDE alternative to Cursor. Pick this if you want a full IDE built around managing local and cloud coding agents, and want to compare editors before committing.
+- A tier: [OpenAI Codex](https://openai.com). Best for: Delegating coding tasks to a cloud agent. Pick this if you want to hand off well-scoped tasks and review the result, rather than pair in an editor.
+- B tier: [Cline](https://cline.bot). Best for: Bring-your-own-model coding in VS Code. Pick this if you want an open, model-flexible agent inside VS Code and control over which model you pay for.
+- B tier: [Aider](https://aider.chat). Best for: Open-source, git-native terminal pairing. Pick this if you want a lightweight open-source terminal pair programmer with tight git integration.
+- B tier: [Zed](https://zed.dev). Best for: A fast editor with built-in AI features. Pick this if editor speed matters most and you want AI features without a heavy IDE.
+
+## Prompt-to-App Builders
+
+Vibe-coding builders that turn a prompt into a deployed web app you can iterate on.
+
+- S tier: [Lovable](https://lovable.dev). Best for: Prompt-to-full-stack app, fast. Pick this if you want to go from an idea to a working full-stack app by describing it.
+- A tier: [Bolt.new](https://bolt.new). Best for: Building and iterating in the browser. Pick this if you want to build, edit, and deploy a web app entirely in the browser.
+- A tier: [v0 by Vercel](https://v0.app). Best for: Generating polished web UIs and apps. Pick this if UI quality matters most and your stack leans toward Vercel / Next.js.
+- A tier: [Replit Agent](https://replit.com). Best for: Idea-to-deployed app inside Replit. Pick this if you want building, hosting, and deploying handled in one place.
+- B tier: [Firebase Studio](https://firebase.google.com). Best for: App building inside the Firebase ecosystem. Pick this if your app will live on Firebase / Google Cloud and you want that integration from the start.
+
+## Vibe-Coder Backend & Deploy Stack
+
+The backend, auth, and deployment layer underneath vibe-coded apps.
+
+- S tier: [Supabase](https://supabase.com). Best for: Postgres database, auth, and storage in one. Pick this if you want an open-source-friendly backend with a real Postgres database under it.
+- S tier: [Vercel](https://vercel.com). Best for: Deploying Next.js and frontend apps. Pick this if you are shipping a Next.js / frontend app and want the simplest path to a live URL.
+- A tier: [Clerk](https://clerk.com). Best for: Drop-in authentication and user management. Pick this if you want polished sign-in, sign-up, and user management without building auth yourself.
+- A tier: [Firebase](https://firebase.google.com). Best for: Google-backed backend for web and mobile. Pick this if you want a mature all-in-one backend, especially for mobile or realtime apps.
+- A tier: [Netlify](https://www.netlify.com). Best for: Deploying static sites and Jamstack apps. Pick this if you are deploying a frontend / Jamstack site and want a simple, established host.
+- B tier: [Neon](https://neon.com). Best for: Serverless Postgres on its own. Pick this if you want serverless Postgres you can pair with any frontend or auth provider.
+- B tier: [Railway](https://railway.com?referralCode=KpJteX). Best for: Deploying backends and services simply. Pick this if you need to deploy a backend service, worker, or database without cloud-console complexity.
+
+## General Chat Assistants
+
+General-purpose assistants builders use for reasoning, drafting, coding help, and research.
+
+- S tier: [ChatGPT](https://chatgpt.com). Best for: All-round assistant with a broad ecosystem. Pick this if you want the default all-rounder and the widest set of built-in tools and integrations.
+- S tier: [Claude](https://claude.ai). Best for: Writing, reasoning, and coding help. Pick this if you do a lot of writing, analysis, or coding and prefer its tone and reasoning style.
+- A tier: [Gemini](https://gemini.google.com). Best for: Google ecosystem and long documents. Pick this if you live in Google Workspace or work with very long documents and media.
+- A tier: [Grok](https://grok.com). Best for: X-connected, real-time-flavoured answers. Pick this if you want an assistant closely tied to X and current conversation there.
+- B tier: [Microsoft Copilot](https://copilot.microsoft.com). Best for: Microsoft 365 and Windows users. Pick this if your work lives in Microsoft 365 and Windows and you want the assistant built into it.
+- B tier: [DeepSeek](https://www.deepseek.com). Best for: Trying open-weight-style models via chat. Pick this if you want to try a capable non-US-lab assistant and compare it against your current default.
+
+## Agent Frameworks & Automation
+
+Frameworks and no-code automation platforms for building agents and connecting tools together.
+
+- S tier: [n8n](https://n8n.io). Best for: Self-hostable workflow + AI automation. Pick this if you want powerful workflow automation you can self-host and extend with code.
+- A tier: [Zapier](https://zapier.com). Best for: Connecting apps without code, fast. Pick this if you need the widest set of ready-made app connections and the least setup friction.
+- A tier: [Make](https://www.make.com). Best for: Visual, more complex automation scenarios. Pick this if you want a visual builder for branching, multi-step automations beyond simple triggers.
+- A tier: [LangGraph](https://www.langchain.com). Best for: Building stateful agents in code. Pick this if you are a developer building agents as code and need control over state and flow.
+- B tier: [CrewAI](https://www.crewai.com). Best for: Role-based multi-agent crews in Python. Pick this if the 'crew of agents with roles' model fits how you think about your workflow.
+- B tier: [OpenAI Agents SDK](https://openai.com). Best for: Building agents on OpenAI models in code. Pick this if you are standardising on OpenAI models and want their first-party agent toolkit.
+
+## AI for Game Dev
+
+AI tools for game-ready assets, prototypes, and in-game characters — the gaming wedge of TierStack.
+
+- A tier: [Meshy](https://www.meshy.ai). Best for: Text/image to 3D models for games. Pick this if you need 3D props and assets quickly for prototypes or jams.
+- A tier: [Tripo](https://www.tripo3d.ai). Best for: Fast AI 3D model generation. Pick this as a second 3D generator to compare against Meshy on your own asset prompts.
+- A tier: [Scenario](https://www.scenario.com). Best for: Consistent, custom-trained game art. Pick this if you need game art in a consistent style you can train and reuse across a project.
+- B tier: [Rosebud AI](https://rosebud.ai). Best for: Building playable games with AI help. Pick this if you want to prototype a playable game with AI assistance rather than just assets.
+- B tier: [Inworld AI](https://inworld.ai). Best for: AI characters and NPC behaviour. Pick this if your game needs conversational NPCs or AI-driven characters, not just static assets.
+- B tier: [Ludo.ai](https://ludo.ai). Best for: Game ideation, research, and assets. Pick this if you want help at the concept and market-research stage of a game, before production.

@@ -43,6 +43,60 @@
     <div class="tabs" id="category-tabs" role="tablist" aria-label="Categories"></div>
     <div id="category-info"></div>
     <div class="tier-board" id="tier-board" style="margin-top:20px"></div>
+<!-- static-tiers:start -->
+<noscript><section class="static-tiers" aria-label="Tier lists (plain HTML)"><p>Editorial v0 — hands-on testing in progress. Paying never changes a rank.</p>
+<h2>AI Coding Agents / IDEs</h2><ul>
+<li><strong>S</strong> <a href="https://cursor.com" rel="noopener">Cursor</a>: best for Daily AI-first coding in a full IDE. Pick this if you want an AI-first editor as your main daily driver.</li>
+<li><strong>S</strong> <a href="https://claude.com" rel="noopener">Claude Code</a>: best for Terminal-driven, multi-file repo work. Pick this if you are comfortable in the terminal and want an agent working across a whole repo.</li>
+<li><strong>A</strong> <a href="https://github.com/features/copilot" rel="noopener">GitHub Copilot</a>: best for Teams already living on GitHub. Pick this if your team is on GitHub and wants AI help inside your existing editor and workflow.</li>
+<li><strong>A</strong> <a href="https://devin.ai/desktop" rel="noopener">Devin Desktop (formerly Windsurf)</a>: best for An agent-first IDE alternative to Cursor. Pick this if you want a full IDE built around managing local and cloud coding agents, and want to compare editors before committing.</li>
+<li><strong>A</strong> <a href="https://openai.com" rel="noopener">OpenAI Codex</a>: best for Delegating coding tasks to a cloud agent. Pick this if you want to hand off well-scoped tasks and review the result, rather than pair in an editor.</li>
+<li><strong>B</strong> <a href="https://cline.bot" rel="noopener">Cline</a>: best for Bring-your-own-model coding in VS Code. Pick this if you want an open, model-flexible agent inside VS Code and control over which model you pay for.</li>
+<li><strong>B</strong> <a href="https://aider.chat" rel="noopener">Aider</a>: best for Open-source, git-native terminal pairing. Pick this if you want a lightweight open-source terminal pair programmer with tight git integration.</li>
+<li><strong>B</strong> <a href="https://zed.dev" rel="noopener">Zed</a>: best for A fast editor with built-in AI features. Pick this if editor speed matters most and you want AI features without a heavy IDE.</li>
+</ul>
+<h2>Prompt-to-App Builders</h2><ul>
+<li><strong>S</strong> <a href="https://lovable.dev" rel="noopener">Lovable</a>: best for Prompt-to-full-stack app, fast. Pick this if you want to go from an idea to a working full-stack app by describing it.</li>
+<li><strong>A</strong> <a href="https://bolt.new" rel="noopener">Bolt.new</a>: best for Building and iterating in the browser. Pick this if you want to build, edit, and deploy a web app entirely in the browser.</li>
+<li><strong>A</strong> <a href="https://v0.app" rel="noopener">v0 by Vercel</a>: best for Generating polished web UIs and apps. Pick this if UI quality matters most and your stack leans toward Vercel / Next.js.</li>
+<li><strong>A</strong> <a href="https://replit.com" rel="noopener">Replit Agent</a>: best for Idea-to-deployed app inside Replit. Pick this if you want building, hosting, and deploying handled in one place.</li>
+<li><strong>B</strong> <a href="https://firebase.google.com" rel="noopener">Firebase Studio</a>: best for App building inside the Firebase ecosystem. Pick this if your app will live on Firebase / Google Cloud and you want that integration from the start.</li>
+</ul>
+<h2>Vibe-Coder Backend &amp; Deploy Stack</h2><ul>
+<li><strong>S</strong> <a href="https://supabase.com" rel="noopener">Supabase</a>: best for Postgres database, auth, and storage in one. Pick this if you want an open-source-friendly backend with a real Postgres database under it.</li>
+<li><strong>S</strong> <a href="https://vercel.com" rel="noopener">Vercel</a>: best for Deploying Next.js and frontend apps. Pick this if you are shipping a Next.js / frontend app and want the simplest path to a live URL.</li>
+<li><strong>A</strong> <a href="https://clerk.com" rel="noopener">Clerk</a>: best for Drop-in authentication and user management. Pick this if you want polished sign-in, sign-up, and user management without building auth yourself.</li>
+<li><strong>A</strong> <a href="https://firebase.google.com" rel="noopener">Firebase</a>: best for Google-backed backend for web and mobile. Pick this if you want a mature all-in-one backend, especially for mobile or realtime apps.</li>
+<li><strong>A</strong> <a href="https://www.netlify.com" rel="noopener">Netlify</a>: best for Deploying static sites and Jamstack apps. Pick this if you are deploying a frontend / Jamstack site and want a simple, established host.</li>
+<li><strong>B</strong> <a href="https://neon.com" rel="noopener">Neon</a>: best for Serverless Postgres on its own. Pick this if you want serverless Postgres you can pair with any frontend or auth provider.</li>
+<li><strong>B</strong> <a href="https://railway.com?referralCode=KpJteX" rel="noopener">Railway</a>: best for Deploying backends and services simply. Pick this if you need to deploy a backend service, worker, or database without cloud-console complexity.</li>
+</ul>
+<h2>General Chat Assistants</h2><ul>
+<li><strong>S</strong> <a href="https://chatgpt.com" rel="noopener">ChatGPT</a>: best for All-round assistant with a broad ecosystem. Pick this if you want the default all-rounder and the widest set of built-in tools and integrations.</li>
+<li><strong>S</strong> <a href="https://claude.ai" rel="noopener">Claude</a>: best for Writing, reasoning, and coding help. Pick this if you do a lot of writing, analysis, or coding and prefer its tone and reasoning style.</li>
+<li><strong>A</strong> <a href="https://gemini.google.com" rel="noopener">Gemini</a>: best for Google ecosystem and long documents. Pick this if you live in Google Workspace or work with very long documents and media.</li>
+<li><strong>A</strong> <a href="https://grok.com" rel="noopener">Grok</a>: best for X-connected, real-time-flavoured answers. Pick this if you want an assistant closely tied to X and current conversation there.</li>
+<li><strong>B</strong> <a href="https://copilot.microsoft.com" rel="noopener">Microsoft Copilot</a>: best for Microsoft 365 and Windows users. Pick this if your work lives in Microsoft 365 and Windows and you want the assistant built into it.</li>
+<li><strong>B</strong> <a href="https://www.deepseek.com" rel="noopener">DeepSeek</a>: best for Trying open-weight-style models via chat. Pick this if you want to try a capable non-US-lab assistant and compare it against your current default.</li>
+</ul>
+<h2>Agent Frameworks &amp; Automation</h2><ul>
+<li><strong>S</strong> <a href="https://n8n.io" rel="noopener">n8n</a>: best for Self-hostable workflow + AI automation. Pick this if you want powerful workflow automation you can self-host and extend with code.</li>
+<li><strong>A</strong> <a href="https://zapier.com" rel="noopener">Zapier</a>: best for Connecting apps without code, fast. Pick this if you need the widest set of ready-made app connections and the least setup friction.</li>
+<li><strong>A</strong> <a href="https://www.make.com" rel="noopener">Make</a>: best for Visual, more complex automation scenarios. Pick this if you want a visual builder for branching, multi-step automations beyond simple triggers.</li>
+<li><strong>A</strong> <a href="https://www.langchain.com" rel="noopener">LangGraph</a>: best for Building stateful agents in code. Pick this if you are a developer building agents as code and need control over state and flow.</li>
+<li><strong>B</strong> <a href="https://www.crewai.com" rel="noopener">CrewAI</a>: best for Role-based multi-agent crews in Python. Pick this if the 'crew of agents with roles' model fits how you think about your workflow.</li>
+<li><strong>B</strong> <a href="https://openai.com" rel="noopener">OpenAI Agents SDK</a>: best for Building agents on OpenAI models in code. Pick this if you are standardising on OpenAI models and want their first-party agent toolkit.</li>
+</ul>
+<h2>AI for Game Dev</h2><ul>
+<li><strong>A</strong> <a href="https://www.meshy.ai" rel="noopener">Meshy</a>: best for Text/image to 3D models for games. Pick this if you need 3D props and assets quickly for prototypes or jams.</li>
+<li><strong>A</strong> <a href="https://www.tripo3d.ai" rel="noopener">Tripo</a>: best for Fast AI 3D model generation. Pick this as a second 3D generator to compare against Meshy on your own asset prompts.</li>
+<li><strong>A</strong> <a href="https://www.scenario.com" rel="noopener">Scenario</a>: best for Consistent, custom-trained game art. Pick this if you need game art in a consistent style you can train and reuse across a project.</li>
+<li><strong>B</strong> <a href="https://rosebud.ai" rel="noopener">Rosebud AI</a>: best for Building playable games with AI help. Pick this if you want to prototype a playable game with AI assistance rather than just assets.</li>
+<li><strong>B</strong> <a href="https://inworld.ai" rel="noopener">Inworld AI</a>: best for AI characters and NPC behaviour. Pick this if your game needs conversational NPCs or AI-driven characters, not just static assets.</li>
+<li><strong>B</strong> <a href="https://ludo.ai" rel="noopener">Ludo.ai</a>: best for Game ideation, research, and assets. Pick this if you want help at the concept and market-research stage of a game, before production.</li>
+</ul>
+</section></noscript>
+<!-- static-tiers:end -->
     <div class="compare-box" id="compare-box"></div>
   </section>
 

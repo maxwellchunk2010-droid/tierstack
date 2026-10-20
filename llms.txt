@@ -16,6 +16,7 @@ TierStack publishes S / A / B / C tier lists for AI coding agents, prompt-to-app
 
 - [Home](https://maxwellchunk2010-droid.github.io/tierstack/): overview and launch categories
 - [Rankings](https://maxwellchunk2010-droid.github.io/tierstack/rankings.html): tier lists by use case
+- [Full tier lists (plain text)](https://maxwellchunk2010-droid.github.io/tierstack/llms-full.txt): every current tier placement with best-for use case and one-line verdict, generated from the site data
 - [How we rank](https://maxwellchunk2010-droid.github.io/tierstack/how-we-rank.html): methodology and honesty rules
 - [Patch Notes](https://maxwellchunk2010-droid.github.io/tierstack/releases.html): dated, sourced releases and meta-changing updates
 - [Best AI coding agent on a budget](https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html): $10-30/month picks across Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Devin Desktop (formerly Windsurf), Cline, Aider and Zed, how each plan's rate limits work, and the run-two-agents-and-route-by-task setup. Prices from official pages, checked 2026-10-19.
