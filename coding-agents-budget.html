@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Best AI Coding Agent on a Budget ($10–30/month) &amp; How to Handle Rate Limits — TierStack</title>
-<meta name="description" content="Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Devin Desktop, Cline, Aider and Zed compared for a $10–30/month budget: plan prices, how rate limits work, a pick per use case, and the two-agent routing setup.">
+<meta name="description" content="Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Devin Desktop, Cline, Aider, Zed and Meta Muse Code compared for a $10–30/month budget: plan prices, how rate limits work, a pick per use case, and the two-agent routing setup.">
 <link rel="canonical" href="https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="TierStack">
@@ -13,12 +13,13 @@
 <meta property="og:url" content="https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Article","headline":"Best AI coding agent on a budget ($10-30/month) and how to handle rate limits","description":"Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Devin Desktop, Cline, Aider and Zed compared for a $10-30/month budget, with official pricing sources checked 2026-10-19.","datePublished":"2026-10-19","dateModified":"2026-10-19","author":{"@type":"Organization","name":"TierStack"},"publisher":{"@type":"Organization","name":"TierStack","url":"https://maxwellchunk2010-droid.github.io/tierstack/"},"mainEntityOfPage":"https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html"},
+{"@type":"Article","headline":"Best AI coding agent on a budget ($10-30/month) and how to handle rate limits","description":"Cursor, Claude Code, OpenAI Codex, GitHub Copilot, Devin Desktop, Cline, Aider, Zed and Meta Muse Code compared for a $10-30/month budget, with official pricing sources checked 2026-10-19.","datePublished":"2026-10-19","dateModified":"2026-10-21","author":{"@type":"Organization","name":"TierStack"},"publisher":{"@type":"Organization","name":"TierStack","url":"https://maxwellchunk2010-droid.github.io/tierstack/"},"mainEntityOfPage":"https://maxwellchunk2010-droid.github.io/tierstack/coding-agents-budget.html"},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"What is the best AI coding agent for $10 a month?","acceptedAnswer":{"@type":"Answer","text":"GitHub Copilot Pro ($10/month) is the pick: unlimited code completions on paid plans plus a monthly allowance of GitHub AI Credits for chat, agent mode and the CLI. Zed Pro ($10/month, $5 of tokens included) is the alternative if you want Zed as your editor. Prices checked 2026-10-19 on official pages."}},
 {"@type":"Question","name":"What is the best AI coding agent for $20 a month?","acceptedAnswer":{"@type":"Answer","text":"Claude Code via Claude Pro ($20/month, or $17/month billed annually) or OpenAI Codex via ChatGPT Plus ($20/month). Both use rolling five-hour usage windows with weekly limits on top. Pick one as your main agent."}},
 {"@type":"Question","name":"How do I handle AI coding agent rate limits on a budget?","acceptedAnswer":{"@type":"Answer","text":"Run two agents from different vendors and route by task: heavy multi-file work on your main agent, quick edits and questions on a second plan. Use smaller models for routine tasks, keep context and MCP servers lean, check remaining usage (for example /status in Codex CLI), and only then consider pay-as-you-go credits or API keys."}},
 {"@type":"Question","name":"Are Cline and Aider free?","acceptedAnswer":{"@type":"Answer","text":"The tools are free and open source (Aider is Apache-2.0; Cline is free for individual developers). You pay for model inference, either through your own API keys or, for Cline, its usage-based provider. Cost depends on the model you choose; check the model provider's official pricing."}},
+{"@type":"Question","name":"What is the cheapest subscription AI coding agent?","acceptedAnswer":{"@type":"Answer","text":"Meta Muse Code Everyday at $5/month (10-50 prompts every 5 hours). Subscriptions default to Contributor mode, which lets Meta train on your prompts and code; you can turn it off. Checked 2026-10-21 on dev.meta.ai."}},
 {"@type":"Question","name":"Does paying change TierStack rankings?","acceptedAnswer":{"@type":"Answer","text":"No. Rankings never change for money. Some links on the site are affiliate/referral links (currently Railway), which are disclosed."}}
 ]}]}
 </script>
@@ -32,6 +33,7 @@
     <a href="releases.html">Patch Notes</a>
     <a href="coding-agents-budget.html" class="active">Budget Coding Agents</a>
     <a href="best-ai-app-builder.html">AI App Builders</a>
+    <a href="cursor-vs-claude-code-vs-codex.html">Cursor vs Claude Code vs Codex</a>
     <a href="how-we-rank.html">How We Rank</a>
     <a href="sponsors.html">Sponsors</a>
   </nav>
@@ -41,7 +43,7 @@
   <section class="hero" style="padding-bottom:10px">
     <span class="eyebrow">Guide &middot; AI Coding Agents</span>
     <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Best AI coding agent on a budget ($10&ndash;30/month) and how to handle rate limits</h1>
-    <p class="lead">Eight coding agents, one budget. Prices and limit rules below come only from each vendor's official pricing or docs page, checked <strong>2026-10-19</strong>. Prices change often &mdash; always check official pricing before you buy.</p>
+    <p class="lead">Nine coding agents, one budget. Prices and limit rules below come only from each vendor's official pricing or docs page, checked <strong>2026-10-19</strong> (Muse Code added and Cursor/Claude/Codex rechecked 2026-10-21). Prices change often &mdash; always check official pricing before you buy.</p>
     <div class="notice"><strong>Editorial guide, not test scores.</strong> Picks are an editorial view while hands-on testing is in progress. Prices exclude tax. Where we could not verify a fact on an official page, we say &ldquo;check official pricing&rdquo;.</div>
   </section>
 
@@ -49,6 +51,7 @@
     <h2>The short answer: pick by budget</h2>
     <div class="grid">
       <article class="card"><p class="kicker">$0</p><h3>Cline or Aider + your own keys</h3><p>Free, open-source agents. You pay only for model usage, so cost scales with how much you run. Good for light or bursty use. Zed Personal is also free with your own keys or external agents.</p></article>
+      <article class="card"><p class="kicker">$5&ndash;15/month</p><h3>Muse Code (Meta)</h3><p>The cheapest subscription terminal agent we list: Everyday $5, High $15. Catch: Contributor mode is on by default, so Meta trains on your code unless you switch it off.</p></article>
       <article class="card"><p class="kicker">$10/month</p><h3>GitHub Copilot Pro</h3><p>Unlimited code completions on paid plans, plus a monthly AI Credits allowance for chat, agent mode and Copilot CLI. Alternative: Zed Pro ($10, $5 of tokens included) if you live in Zed.</p></article>
       <article class="card"><p class="kicker">$20/month</p><h3>Claude Code (Claude Pro) or Codex (ChatGPT Plus)</h3><p>The strongest main-agent value at this price. Both meter on rolling five-hour windows with weekly limits. Devin Desktop Pro ($20) is the IDE-first alternative.</p></article>
       <article class="card"><p class="kicker">$30/month</p><h3>Two agents: a $20 main + Copilot Pro</h3><p>Claude Pro or ChatGPT Plus as the main agent, plus Copilot Pro for completions and overflow. Two vendors means two separate limit pools. If you want one IDE instead, Cursor Premium is $30.</p></article>
@@ -79,6 +82,7 @@
         <tr><td><strong>Cline</strong></td><td>Free open-source extension for individuals; no subscription</td><td>No plan limits of its own &mdash; you pay for inference per use via the Cline provider or your own API keys. Limits are whatever your model provider sets.</td><td>Depends on your provider. Check official pricing for the model you use.</td><td><a href="https://cline.bot/pricing" target="_blank" rel="noopener">cline.bot/pricing</a> (2026-10-19)</td></tr>
         <tr><td><strong>Aider</strong></td><td>Free, open source (Apache-2.0)</td><td>Connects to most LLMs with your own keys; cost and rate limits come from your model provider.</td><td>Depends on your provider. Check official pricing.</td><td><a href="https://aider.chat/docs/llms.html" target="_blank" rel="noopener">aider.chat docs</a>, <a href="https://github.com/Aider-AI/aider" target="_blank" rel="noopener">GitHub license</a> (2026-10-19)</td></tr>
         <tr><td><strong>Zed</strong></td><td>Personal $0 (your own keys or external agents like Claude Agent and Codex CLI); Pro $10/mo with $5 of tokens</td><td>Pro: unlimited edit predictions; hosted model usage beyond $5 billed at API list price +10%.</td><td>Usage-based billing continues; set a spending cap.</td><td><a href="https://zed.dev/pricing" target="_blank" rel="noopener">zed.dev/pricing</a> (2026-10-19)</td></tr>
+        <tr><td><strong>Muse Code</strong> (Meta)</td><td>Everyday $5/mo (Muse Spark, Muse Wonder, Muse Image); High $15/mo (5x Everyday); Power $50/mo (20x, incl. Muse Wonder Full); Maximum $200/mo (80x). Pay-as-you-go per token also available.</td><td>Everyday: 10&ndash;50 prompts every 5 hours; higher plans are multiples of that. <strong>Subscriptions default to Contributor mode</strong>: Meta trains on your prompts, code, files and responses in exchange for more usage. You can turn it off any time in Muse Code settings.</td><td>Upgrade to the next plan or wait for your limit to refresh (Maximum: wait only). Extra API keys bill pay-as-you-go.</td><td><a href="https://dev.meta.ai/help/subscriptions/what-is-a-muse-code-subscription" target="_blank" rel="noopener">dev.meta.ai Muse Code subscription</a> (2026-10-21)</td></tr>
       </tbody>
     </table></div>
     <p class="sub">Exact message counts, weekly caps and credit burn rates are not published as fixed numbers by most vendors &mdash; check official pricing and your usage dashboard.</p>
@@ -91,9 +95,22 @@
       <article class="card"><h3>Terminal-first agent work</h3><p>Claude Code (Claude Pro) or Codex CLI (ChatGPT Plus), $20.</p></article>
       <article class="card"><h3>One AI IDE, nothing else</h3><p>Devin Desktop Pro ($20) or Cursor Premium ($30). Note Cursor's third-party models are billed separately at API list price.</p></article>
       <article class="card"><h3>Irregular use, want control</h3><p>Cline or Aider with your own key and a provider spend cap, or Zed with your own keys.</p></article>
+      <article class="card"><h3>Terminal agent on $5&ndash;15</h3><p>Muse Code Everyday ($5) or High ($15). Turn off Contributor mode first if you don't want Meta training on your code.</p></article>
       <article class="card"><h3>Hit limits daily</h3><p>Two vendors, route by task (above) &mdash; usually cheaper than jumping to a $100+ tier.</p></article>
     </div>
     <p style="margin-top:14px">See the full <a href="rankings.html?cat=coding-agents">AI coding agents tier list</a> and <a href="how-we-rank.html">how we rank</a>.</p>
+  </section>
+
+  <section id="pricing-changes">
+    <h2>Pricing and limits changes log</h2>
+    <p>Dated changes to plans and limits for the agents on this page, from official pages only. Newest first.</p>
+    <ul>
+      <li><strong>2026-10-21</strong> &mdash; Added <strong>Meta Muse Code</strong>: Everyday $5, High $15, Power $50, Maximum $200 per month; Contributor mode (training on your content) is on by default. <a href="https://dev.meta.ai/help/subscriptions/what-is-a-muse-code-subscription" target="_blank" rel="noopener">Source</a>. Rechecked Cursor, Claude and Codex pricing pages: no plan price changes since 2026-10-19.</li>
+      <li><strong>2026-10-19</strong> &mdash; Guide published; all prices checked on official pages.</li>
+      <li><strong>2026-10-14</strong> &mdash; OpenAI retired GPT-5.5 from Codex for ChatGPT sign-ins (API-key sessions unaffected). <a href="https://developers.openai.com/codex/pricing" target="_blank" rel="noopener">Source</a>.</li>
+      <li><strong>2026-10-12</strong> &mdash; Meta added the Muse Code Maximum Usage plan (80x Everyday) with Muse Wonder Full on Power and Maximum. <a href="https://dev.meta.ai/resources/blog/build-with-muse-wonder" target="_blank" rel="noopener">Source</a>.</li>
+    </ul>
+    <p class="sub">See also: <a href="cursor-vs-claude-code-vs-codex.html">Cursor vs Claude Code vs Codex</a>.</p>
   </section>
 
   <section>
@@ -102,6 +119,7 @@
     <h3>What's the best for $20 a month?</h3><p>Claude Code via Claude Pro or Codex via ChatGPT Plus. Pick one as your main agent.</p>
     <h3>How do I stop hitting rate limits?</h3><p>Route by task across two vendors, use smaller models for routine work, keep context lean, and watch your usage dashboard. Pay-as-you-go credits or API keys are the last resort.</p>
     <h3>Are Cline and Aider really free?</h3><p>The tools are free; model usage is not. Check official pricing for the model provider you use.</p>
+    <h3>What is the cheapest subscription coding agent?</h3><p>Meta Muse Code Everyday at $5/month (10&ndash;50 prompts every 5 hours). It defaults to Contributor mode, which lets Meta train on your code; you can turn that off. Checked 2026-10-21.</p>
     <h3>Does paying change these picks?</h3><p>No. Rankings and picks never change for money.</p>
   </section>
 </main>
