@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patch Notes Issue #1: Week of Oct 19–23, 2026 — TierStack</title>
+<meta name="description" content="Firebase Studio drops to C, Muse Code and Amp join at B, and the AI builder-tool releases worth knowing from the week of Oct 19–23, 2026.">
+<link rel="canonical" href="https://maxwellchunk2010-droid.github.io/tierstack/newsletter/issue-1.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TierStack">
+<meta property="og:title" content="Patch Notes Issue #1: Week of Oct 19–23, 2026 — TierStack">
+<meta property="og:description" content="Firebase Studio drops to C, Muse Code and Amp join at B, and the AI builder-tool releases worth knowing from the week of Oct 19–23, 2026.">
+<meta property="og:url" content="https://maxwellchunk2010-droid.github.io/tierstack/newsletter/issue-1.html">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+  <a class="logo" href="../index.html">Tier<span>Stack</span></a>
+  <nav>
+    <a href="../rankings.html">Rankings</a>
+    <a href="../releases.html">Patch Notes</a>
+    <a href="../coding-agents-budget.html">Budget Coding Agents</a>
+    <a href="../best-ai-app-builder.html" class="active">AI App Builders</a>
+    <a href="../cursor-vs-claude-code-vs-codex.html">Cursor vs Claude Code vs Codex</a>
+    <a href="../how-we-rank.html">How We Rank</a>
+    <a href="../sponsors.html">Sponsors</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero" style="padding-bottom:10px">
+    <span class="eyebrow">Newsletter &middot; Issue #1</span>
+    <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Patch Notes: week of Oct 19&ndash;23, 2026</h1>
+    <p class="lead">Firebase Studio drops to C, Muse Code and Amp join, and the releases worth knowing. Published 2026-10-28.</p>
+    <div class="notice">All placements are editorial (v0) while hands-on testing is in progress. Paying never changes a tier.</div>
+  </section>
+  <section>
+    <h2>Tier changes (and why)</h2>
+    <ul>
+      <li><strong>Firebase Studio: B &rarr; C.</strong> It closed to new signups and workspaces on 2026-06-22 and shuts down on 2027-03-22 (<a href="https://firebase.google.com/docs/studio" target="_blank" rel="noopener">Firebase docs</a>, rechecked Oct 21). New users should pick another builder.</li>
+      <li><strong>New: Muse Code (Meta) at B.</strong> Plans are $5/$15/$50/$200. Contributor mode is on by default, meaning Meta trains on your content unless you turn it off. <a href="https://dev.meta.ai/help/subscriptions/what-is-a-muse-code-subscription" target="_blank" rel="noopener">Source</a>.</li>
+      <li><strong>New: Amp at B.</strong> Free Hobby tier with your own subs/keys, $20 Individual, and a new Linear agent (Oct 19). B is our standard untested starting placement for new listings. <a href="https://ampcode.com/pricing" target="_blank" rel="noopener">Source</a>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>New releases worth knowing</h2>
+    <ul>
+      <li><strong>Claude Code 2.1.304&ndash;2.1.307.</strong> 2.1.307 stops HTTP MCP tool calls from being sent twice when a connection drops. Matters if your agent writes to databases, payments or tickets through MCP. <a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Changelog</a>.</li>
+      <li><strong>VS Code 1.143.</strong> The Copilot harness is now the default, plus a Compare Models view. <a href="https://code.visualstudio.com/updates/v1_143" target="_blank" rel="noopener">Release notes</a>. Copilot CLI 1.0.100 also shipped (<a href="https://github.com/github/copilot-cli/releases/tag/v1.0.100" target="_blank" rel="noopener">release</a>).</li>
+      <li><strong>Amp in Linear.</strong> Assign issues to an agent from Linear. <a href="https://ampcode.com/news/assign-it-to-amp" target="_blank" rel="noopener">Amp news</a>.</li>
+      <li><strong>Recursive Flint.</strong> An open-weight (Apache 2.0) coding model built to run locally on a laptop; benchmarks are vendor-reported. <a href="https://recursive.com/updates/introducing-recursive-flint" target="_blank" rel="noopener">Announcement</a>.</li>
+      <li><strong>MiniMax M3.1 Flash</strong> at $0.15 in / $0.60 out per million tokens. Cheap fuel for bring-your-own-key agents. <a href="https://www.minimax.io/blog/minimax-m31f" target="_blank" rel="noopener">MiniMax blog</a>.</li>
+      <li><strong>OpenAI models are coming to Google Cloud</strong> Model Garden (GA planned in the coming weeks), and soon to Google Antigravity. <a href="https://openai.com/index/openai-models-google-cloud/" target="_blank" rel="noopener">OpenAI post</a>.</li>
+      <li><strong>Framer MCP.</strong> An official MCP server lets Codex, Claude Code, Cursor and others edit and publish Framer sites. <a href="https://www.framer.com/updates" target="_blank" rel="noopener">Framer updates</a>.</li>
+      <li><strong>Meta Muse Spark Open</strong> and new Muse plans also landed. <a href="https://dev.meta.ai/resources/blog/build-with-muse-spark-open" target="_blank" rel="noopener">Meta blog</a>.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>One pick per job</h2>
+    <ul>
+      <li><strong>Daily AI coding in an editor:</strong> Cursor.</li>
+      <li><strong>Terminal, whole-repo agent work:</strong> Claude Code (comes with Claude Pro).</li>
+      <li><strong>Hand off scoped tasks to a cloud agent:</strong> OpenAI Codex.</li>
+      <li><strong>Coding agent on $10/month:</strong> GitHub Copilot Pro.</li>
+      <li><strong>Idea to full-stack app by prompting:</strong> Lovable.</li>
+      <li><strong>Polished UI on a Next.js stack:</strong> v0.</li>
+      <li><strong>Backend (Postgres, auth, storage):</strong> Supabase.</li>
+      <li><strong>Deploying a frontend:</strong> Vercel.</li>
+      <li><strong>Workflow automation you can self-host:</strong> n8n.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>New on TierStack</h2>
+    <ul>
+      <li><a href="../coding-agents-budget.html">Best AI coding agent on a budget</a>, now with a dated pricing and limits changes log.</li>
+      <li><a href="../best-ai-app-builder.html">Best AI app builder for vibe coders</a></li>
+      <li><a href="../cursor-vs-claude-code-vs-codex.html">Cursor vs Claude Code vs Codex</a></li>
+    </ul>
+    <p>Rankings never change for money. Some links are affiliate/referral links (currently Railway), always disclosed. <a href="../rankings.html">Full rankings</a> &middot; <a href="../how-we-rank.html">How we rank</a> &middot; <a href="../releases.html">All Patch Notes</a></p>
+  </section>
+
+</main>
+
+<footer class="site"><div class="wrap">
+  <p><strong style="color:var(--text)">TierStack</strong> — prototype. <a href="../rankings.html">Rankings</a> &middot; <a href="../how-we-rank.html">How we rank</a></p>
+  <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this site are affiliate/referral links (currently Railway); rankings are never for sale. Paying never changes a rank. If you use an affiliate/referral link, TierStack may earn a commission or credit at no extra cost to you &mdash; and tools without affiliate programmes get the same treatment. See <a href="../sponsors.html">Sponsors &amp; disclosure</a>.</p>
+</div></footer>
+<script src="../data.js"></script>
+<script src="../app.js"></script>
+</body>
+</html>

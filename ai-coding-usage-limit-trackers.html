@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Track AI Coding Usage Limits (Claude Code, Codex, Copilot) — TierStack</title>
+<meta name="description" content="Built-in commands and free open-source trackers (ccusage, AgentLimits, OpenTokenUsage, aiusage) for checking Claude Code, Codex and GitHub Copilot usage limits.">
+<link rel="canonical" href="https://maxwellchunk2010-droid.github.io/tierstack/ai-coding-usage-limit-trackers.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TierStack">
+<meta property="og:title" content="How to Track AI Coding Usage Limits (Claude Code, Codex, Copilot) — TierStack">
+<meta property="og:description" content="Built-in commands and free open-source trackers (ccusage, AgentLimits, OpenTokenUsage, aiusage) for checking Claude Code, Codex and GitHub Copilot usage limits.">
+<meta property="og:url" content="https://maxwellchunk2010-droid.github.io/tierstack/ai-coding-usage-limit-trackers.html">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+  <a class="logo" href="index.html">Tier<span>Stack</span></a>
+  <nav>
+    <a href="rankings.html">Rankings</a>
+    <a href="releases.html">Patch Notes</a>
+    <a href="coding-agents-budget.html">Budget Coding Agents</a>
+    <a href="best-ai-app-builder.html" class="active">AI App Builders</a>
+    <a href="cursor-vs-claude-code-vs-codex.html">Cursor vs Claude Code vs Codex</a>
+    <a href="how-we-rank.html">How We Rank</a>
+    <a href="sponsors.html">Sponsors</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero" style="padding-bottom:10px">
+    <span class="eyebrow">Guide &middot; AI Coding Agents</span>
+    <h1 style="font-size:clamp(2rem,4.5vw,3rem)">How to track AI coding usage limits (Claude Code, Codex, Copilot)</h1>
+    <p class="lead">The built-in commands and the free, open-source trackers that show how much of your Claude Code, Codex or Copilot allowance you have left. Every tool below links to its official page or repo, checked <strong>2026-10-28</strong>.</p>
+    <div class="notice"><strong>Editorial guide, not test scores.</strong> We list tools, we don't rank them, and nobody paid to be here. Third-party trackers are community projects: read what they access before you sign in.</div>
+  </section>
+
+  <section>
+    <h2>Start with the built-in commands</h2>
+    <ul>
+      <li><strong>Claude Code: <code>/usage</code>.</strong> Pro and Max subscribers see plan usage bars, activity stats and a usage breakdown. Since 2.1.312 the rolling window is called the &ldquo;5-hour limit&rdquo;. <a href="https://code.claude.com/docs/en/costs" target="_blank" rel="noopener">Claude Code docs</a>.</li>
+      <li><strong>OpenAI Codex: <code>/status</code>.</strong> Shows remaining usage in the CLI. Limits depend on your ChatGPT plan and model. <a href="https://learn.chatgpt.com/docs/pricing" target="_blank" rel="noopener">Codex pricing &amp; limits</a>.</li>
+      <li><strong>GitHub Copilot:</strong> premium request usage is shown in your GitHub billing settings. <a href="https://docs.github.com/en/copilot/concepts/billing/copilot-requests" target="_blank" rel="noopener">GitHub docs</a>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Free trackers worth knowing</h2>
+    <div class="grid">
+      <article class="card"><p class="kicker">Terminal &middot; any OS</p><h3><a href="https://github.com/ccusage/ccusage" target="_blank" rel="noopener">ccusage</a></h3><p>Reads the local logs coding CLIs already write and reports daily, weekly, monthly and per-session tokens and estimated cost. Covers Claude Code, Codex, Amp, Copilot CLI, Gemini CLI, Antigravity and more, plus Claude 5-hour blocks. Run <code>npx ccusage@latest</code>. It estimates usage from logs; it does not read your plan's limit.</p></article>
+      <article class="card"><p class="kicker">macOS menu bar</p><h3><a href="https://github.com/Nihondo/AgentLimits" target="_blank" rel="noopener">AgentLimits</a></h3><p>Menu bar app and widgets showing Codex and Claude Code 5-hour and weekly usage plus Copilot premium requests. Marked &ldquo;in development&rdquo;; it signs in to your accounts and uses unofficial endpoints.</p></article>
+      <article class="card"><p class="kicker">Windows 11 tray</p><h3><a href="https://opentokenusage.app/" target="_blank" rel="noopener">OpenTokenUsage</a></h3><p>Free, open-source (MIT) tray app showing session and weekly limits, credits and reset times for Claude, Codex, Cursor and other subscriptions.</p></article>
+      <article class="card"><p class="kicker">Terminal + tray &middot; Linux/macOS/Windows</p><h3><a href="https://github.com/ahsanhabibakik/aiusage" target="_blank" rel="noopener">aiusage</a></h3><p>Shows Claude session (5h) and weekly usage via your existing Claude Code login, Codex weekly limits if the CLI is installed, and a local spend estimate. Exposes a loopback-only JSON API.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>How to stop hitting limits</h2>
+    <ul>
+      <li>Check usage before a big multi-file task, not after.</li>
+      <li>Keep context lean: trim large CLAUDE.md/AGENTS.md files and unused MCP servers.</li>
+      <li>Use smaller models for routine edits.</li>
+      <li>Run two agents from different vendors and route by task. See <a href="coding-agents-budget.html">Best AI coding agent on a budget</a> and <a href="cursor-vs-claude-code-vs-codex.html">Cursor vs Claude Code vs Codex</a>.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site"><div class="wrap">
+  <p><strong style="color:var(--text)">TierStack</strong> — prototype. <a href="rankings.html">Rankings</a> &middot; <a href="how-we-rank.html">How we rank</a></p>
+  <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this site are affiliate/referral links (currently Railway); rankings are never for sale. Paying never changes a rank. If you use an affiliate/referral link, TierStack may earn a commission or credit at no extra cost to you &mdash; and tools without affiliate programmes get the same treatment. See <a href="sponsors.html">Sponsors &amp; disclosure</a>.</p>
+</div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
