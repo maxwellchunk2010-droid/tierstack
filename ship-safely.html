@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ship Safely: A Security Checklist for AI-Built Apps — TierStack</title>
+<meta name="description" content="A practical checklist before you ship an AI-built app: turn on Supabase Row Level Security, keep secrets out of client code, cap API spend, test while logged out, and treat hosting setup links like passwords.">
+<link rel="canonical" href="https://maxwellchunk2010-droid.github.io/tierstack/ship-safely.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TierStack">
+<meta property="og:title" content="Ship safely: a security checklist for AI-built apps — TierStack">
+<meta property="og:description" content="Turn on Supabase Row Level Security, keep secrets out of client code, cap API spend, test while logged out, and treat hosting setup links like passwords.">
+<meta property="og:url" content="https://maxwellchunk2010-droid.github.io/tierstack/ship-safely.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Ship safely: a security checklist for AI-built apps","description":"A practical checklist before you ship an AI-built app: turn on Supabase Row Level Security, keep secrets out of client code, cap API spend, test while logged out, and treat hosting setup links like passwords.","datePublished":"2026-11-17","dateModified":"2026-11-17","author":{"@type":"Organization","name":"TierStack"},"publisher":{"@type":"Organization","name":"TierStack","url":"https://maxwellchunk2010-droid.github.io/tierstack/"},"mainEntityOfPage":"https://maxwellchunk2010-droid.github.io/tierstack/ship-safely.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Supabase Row Level Security, and why does it matter for AI-built apps?","acceptedAnswer":{"@type":"Answer","text":"Row Level Security (RLS) is a Postgres feature that decides which rows each role can read or change. Supabase's publishable (anon) key is designed to be public, so table access depends on RLS being enabled and on policies that are not overly broad. Official Supabase docs warn that a table in an exposed schema without RLS can be readable and writable by any role with a grant on it."}},{"@type":"Question","name":"Were Lovable apps hacked?","acceptedAnswer":{"@type":"Answer","text":"No. Research published by Crissy Field GmbH found many Lovable projects using Supabase returned database records without a login. The researchers point to missing or over-permissive Row Level Security in the apps, not a breach of Lovable itself. Sending records on page load is not automatically a leak, because some data may be meant to be public; the researchers also found further readable records, including serious exposures, on a subset of those sites."}},{"@type":"Question","name":"How should I test an AI-built app while logged out?","acceptedAnswer":{"@type":"Answer","text":"Open the live site in a private or logged-out browser window, as a stranger would. Confirm that private records, admin pages and account data are not visible, and that actions meant for signed-in users fail. Do this before you put real customer data in the app, and again after you change permissions."}},{"@type":"Question","name":"Should I put API keys or database secrets in client code?","acceptedAnswer":{"@type":"Answer","text":"No. Keep service-role keys, private API keys and other secrets on the server or in environment variables that are not shipped to the browser or committed to a public repo. A publishable Supabase anon key may appear in client code by design; that is why RLS and tight policies have to do the access control. Set billing limits or spend caps on provider keys so a leaked key cannot run up an unbounded bill."}},{"@type":"Question","name":"What is the caution about Spacefast setup links?","acceptedAnswer":{"@type":"Answer","text":"A TechTimes hands-on published Nov 10, 2026, reported that redeeming a Spacefast setup link can give an agent admin rights over the team through an API key, so the link behaves like an admin credential. Treat it like a password: do not paste it into a public chat or a shared doc."}}]}]}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+  <a class="logo" href="index.html">Tier<span>Stack</span></a>
+  <nav>
+    <a href="rankings.html">Rankings</a>
+    <a href="releases.html">Patch Notes</a>
+    <a href="coding-agents-budget.html">Budget Coding Agents</a>
+    <a href="best-ai-app-builder.html">AI App Builders</a>
+    <a href="cursor-vs-claude-code-vs-codex.html">Cursor vs Claude Code vs Codex</a>
+    <a href="how-we-rank.html">How We Rank</a>
+    <a href="sponsors.html">Sponsors</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <section class="hero" style="padding-bottom:10px">
+    <span class="eyebrow">Guide &middot; Security checklist</span>
+    <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Ship safely: a security checklist for AI-built apps</h1>
+    <p class="lead">Before you put real users or customer data on an app you built with an AI tool, run through this list. It covers database access, secrets, spending limits, logged-out testing, and one hosting setup-link caution. Sources were checked <strong>2026-11-17</strong>.</p>
+    <div class="notice"><strong>Editorial checklist, not a penetration test.</strong> This is a plain-English pre-ship list, not a hands-on audit of any one app or vendor. Paying never changes a rank, and nobody paid to be mentioned here.</div>
+  </section>
+
+  <section>
+    <h2>Turn on Supabase Row Level Security</h2>
+    <p>If your app uses <a href="https://supabase.com/docs/guides/database/postgres/row-level-security" target="_blank" rel="noopener">Supabase</a>, Row Level Security (RLS) is the rule layer that decides which rows each database role can read or change. Supabase&rsquo;s publishable (anon) key is designed to be public, so access control depends on RLS being enabled and on policies that are not overly broad (for example, a policy that allows anonymous reads of everything).</p>
+    <p>Official Supabase docs warn that a table in an exposed schema without RLS can be readable and writable by any role with a grant on it. Their advice: enable RLS on every table in an exposed schema, set grants to match what the app actually needs, write a policy per operation, and test allow and deny cases for signed-out and signed-in roles.</p>
+    <ul>
+      <li>Enable RLS on every table that the client can reach.</li>
+      <li>Write policies tied to the signed-in user where data should be private.</li>
+      <li>Revoke leftover default grants that are broader than your app needs.</li>
+      <li>Use Supabase&rsquo;s security advisor in the dashboard to flag tables with RLS turned off.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What the Lovable exposure research found</h2>
+    <p>In November 2026, German security firm <a href="https://www.crissyfield.de/research/lovable-en/" target="_blank" rel="noopener">Crissy Field GmbH</a> published research (covered with Handelsblatt on Nov 2, with updated figures in the research report) on apps built with Lovable.</p>
+    <ul>
+      <li>They examined 159,041 Lovable projects from the open web archive Common Crawl (December 2025 to September 2026).</li>
+      <li>Of those, 34,545 used Supabase.</li>
+      <li>24,664 of those sites sent database records as soon as the page loaded, with no login. The researchers are clear that this alone is not automatically a leak: some of that data may be intended for public display.</li>
+      <li>With further read-only requests using the same public API key, they found records containing email addresses in 10,560 tables across 7,403 of those 24,664 sites. They also documented serious exposures, including personal profiles, payment information, and identity-document details. They note that the 30% figure is not a confirmed leak rate, and that the Common Crawl sample is not representative of all Lovable apps.</li>
+    </ul>
+    <p><strong>This was not a hack of Lovable itself.</strong> The findings point to missing or over-permissive Row Level Security in the generated apps. Access-control mistakes can happen in any stack. If you built on Lovable and Supabase, turn on RLS and test while logged out before you ship, then check again after permission changes. See the <a href="releases.html">Patch Notes entry</a> and our <a href="best-ai-app-builder.html">AI app builder guide</a>.</p>
+  </section>
+
+  <section>
+    <h2>Watch API keys that have no spending limit</h2>
+    <p>A secret that can call a paid API is also a blank check if it leaks and the account has no cap. Before you ship:</p>
+    <ul>
+      <li>Set a billing limit, spend cap, or budget alert on each provider key you use (OpenAI, Anthropic, Google, and any other billed API). Check the vendor&rsquo;s official billing or usage settings for how to do that.</li>
+      <li>Give each environment its own key, and revoke keys you no longer need.</li>
+      <li>If a key may have been committed to a public repo, pasted into a chat, or baked into a client bundle, rotate it and review the bill.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Keep secrets out of client code</h2>
+    <p>Anything shipped to the browser, baked into a mobile app, or committed to a public repository can be copied. Keep service-role keys, private API keys, webhook secrets, and database admin credentials on the server or in environment variables that are not published with the app.</p>
+    <p>A special case: the Supabase publishable (anon) key is meant to be public. That is not a license to skip access control. The key can appear in client code by design, which is why RLS and tight policies have to decide what a signed-out visitor can read. Never put the Supabase <code>service_role</code> key in client code; it bypasses RLS.</p>
+  </section>
+
+  <section>
+    <h2>Test while logged out</h2>
+    <p>Build tools and preview windows often keep you signed in, so a page can look fine to you and still be open to a stranger. Before you ship, and again after you change permissions:</p>
+    <ul>
+      <li>Open the live URL in a private or logged-out window, on a browser that has no session cookie for your app.</li>
+      <li>Confirm that private records, admin screens, invoices, messages, and account lists are not visible.</li>
+      <li>Try the actions a signed-out visitor should not be able to run (edits, exports, payments, user lookups) and confirm they fail.</li>
+      <li>If you use Supabase, confirm that tables you consider private are not readable with only the public anon key.</li>
+    </ul>
+    <p>If anything private appears, turn on or tighten RLS (or the equivalent access rules on your stack) before you add real customer data.</p>
+  </section>
+
+  <section>
+    <h2>Treat a Spacefast setup link like an admin credential</h2>
+    <p><a href="https://spacefast.com" target="_blank" rel="noopener">Spacefast</a>, launched by Automattic on Nov 9, 2026, is a hosting and deploy layer for apps built with tools such as Claude Code, Codex or Cursor. It is watch-listed and unranked on TierStack; see the <a href="releases.html">Patch Notes entry</a>.</p>
+    <p>A <a href="https://www.techtimes.com/articles/330352/20261110/ai-app-hosting-automattic-launches-spacefast-so-claude-chatgpt-can-publish-apps.htm" target="_blank" rel="noopener">TechTimes hands-on published Nov 10, 2026</a> (reporter Devin Culbertson, citing tester Casey Burridge) reported that redeeming the setup link can give the agent admin rights over the team through an API key, so the link behaves like an admin credential. The same review said the link itself expires shortly after it is created, while the resulting API key can last longer.</p>
+    <p>Treat that setup link the way you would treat a password: do not paste it into a public chat, a ticket, or a shared doc, and do not leave it in a screenshot. This is one tester&rsquo;s published finding, not a TierStack hands-on test; confirm current behavior in Spacefast&rsquo;s own docs before you rely on it.</p>
+  </section>
+
+  <section>
+    <h2>FAQ</h2>
+    <h3>What is Supabase Row Level Security, and why does it matter for AI-built apps?</h3>
+    <p>Row Level Security (RLS) is a Postgres feature that decides which rows each role can read or change. Supabase&rsquo;s publishable (anon) key is designed to be public, so table access depends on RLS being enabled and on policies that are not overly broad. Official <a href="https://supabase.com/docs/guides/database/postgres/row-level-security" target="_blank" rel="noopener">Supabase docs</a> warn that a table in an exposed schema without RLS can be readable and writable by any role with a grant on it.</p>
+    <h3>Were Lovable apps hacked?</h3>
+    <p>No. Research published by <a href="https://www.crissyfield.de/research/lovable-en/" target="_blank" rel="noopener">Crissy Field GmbH</a> found many Lovable projects using Supabase returned database records without a login. The researchers point to missing or over-permissive Row Level Security in the apps, not a breach of Lovable itself. Sending records on page load is not automatically a leak, because some data may be meant to be public; the researchers also found further readable records, including serious exposures, on a subset of those sites.</p>
+    <h3>How should I test an AI-built app while logged out?</h3>
+    <p>Open the live site in a private or logged-out browser window, as a stranger would. Confirm that private records, admin pages and account data are not visible, and that actions meant for signed-in users fail. Do this before you put real customer data in the app, and again after you change permissions.</p>
+    <h3>Should I put API keys or database secrets in client code?</h3>
+    <p>No. Keep service-role keys, private API keys and other secrets on the server or in environment variables that are not shipped to the browser or committed to a public repo. A publishable Supabase anon key may appear in client code by design; that is why RLS and tight policies have to do the access control. Set billing limits or spend caps on provider keys so a leaked key cannot run up an unbounded bill.</p>
+    <h3>What is the caution about Spacefast setup links?</h3>
+    <p>A <a href="https://www.techtimes.com/articles/330352/20261110/ai-app-hosting-automattic-launches-spacefast-so-claude-chatgpt-can-publish-apps.htm" target="_blank" rel="noopener">TechTimes hands-on published Nov 10, 2026</a> reported that redeeming a Spacefast setup link can give an agent admin rights over the team through an API key, so the link behaves like an admin credential. Treat it like a password: do not paste it into a public chat or a shared doc.</p>
+    <p>See the <a href="best-ai-app-builder.html">AI app builder guide</a>, <a href="releases.html">Patch Notes</a>, and <a href="how-we-rank.html">how we rank</a>.</p>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">
+  <p><strong style="color:var(--text)">TierStack</strong> — prototype. <a href="rankings.html">Rankings</a> &middot; <a href="how-we-rank.html">How we rank</a></p>
+  <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this site are affiliate/referral links (currently Railway); rankings are never for sale. Paying never changes a rank. If you use an affiliate/referral link, TierStack may earn a commission or credit at no extra cost to you &mdash; and tools without affiliate programmes get the same treatment. See <a href="sponsors.html">Sponsors &amp; disclosure</a>.</p>
+</div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

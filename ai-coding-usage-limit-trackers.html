@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How to Track AI Coding Usage Limits (Claude Code, Codex, Copilot) — TierStack</title>
-<meta name="description" content="Built-in commands and free open-source trackers (ccusage, AgentLimits, OpenTokenUsage, aiusage) for checking Claude Code, Codex and GitHub Copilot usage limits.">
+<title>How to Track AI Coding Usage Limits, and What to Switch to When Claude Code Is Down — TierStack</title>
+<meta name="description" content="Built-in commands and free open-source trackers for Claude Code, Codex and Copilot usage limits, plus what to switch to if Claude Code is down or you hit a limit.">
 <link rel="canonical" href="https://maxwellchunk2010-droid.github.io/tierstack/ai-coding-usage-limit-trackers.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="TierStack">
-<meta property="og:title" content="How to Track AI Coding Usage Limits (Claude Code, Codex, Copilot) — TierStack">
-<meta property="og:description" content="Built-in commands and free open-source trackers (ccusage, AgentLimits, OpenTokenUsage, aiusage) for checking Claude Code, Codex and GitHub Copilot usage limits.">
+<meta property="og:title" content="How to Track AI Coding Usage Limits, and What to Switch to When Claude Code Is Down — TierStack">
+<meta property="og:description" content="Built-in commands and free open-source trackers for Claude Code, Codex and Copilot usage limits, plus what to switch to if Claude Code is down or you hit a limit.">
 <meta property="og:url" content="https://maxwellchunk2010-droid.github.io/tierstack/ai-coding-usage-limit-trackers.html">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -31,8 +31,21 @@
   <section class="hero" style="padding-bottom:10px">
     <span class="eyebrow">Guide &middot; AI Coding Agents</span>
     <h1 style="font-size:clamp(2rem,4.5vw,3rem)">How to track AI coding usage limits (Claude Code, Codex, Copilot)</h1>
-    <p class="lead">The built-in commands and the free, open-source trackers that show how much of your Claude Code, Codex or Copilot allowance you have left. Every tool below links to its official page or repo, checked <strong>2026-10-28</strong>.</p>
+    <p class="lead">The built-in commands and the free, open-source trackers that show how much of your Claude Code, Codex or Copilot allowance you have left, plus what to switch to if Claude Code is down or you hit a limit. Trackers below were checked <strong>2026-10-28</strong>. The switch-to notes and Nov 13 outage dates were checked <strong>2026-11-17</strong>.</p>
     <div class="notice"><strong>Editorial guide, not test scores.</strong> We list tools, we don't rank them, and nobody paid to be here. Third-party trackers are community projects: read what they access before you sign in.</div>
+  </section>
+
+  <section>
+    <h2 id="switch-to">Claude Code is down, or you hit a usage limit. What should you switch to?</h2>
+    <p>First check whether the service is actually down on <a href="https://status.claude.com" target="_blank" rel="noopener">status.claude.com</a>. If you still have access, Claude Code&rsquo;s <code>/usage</code> command shows plan bars and the rolling &ldquo;5-hour limit.&rdquo;</p>
+    <p>On <strong>Nov 13, 2026</strong>, Anthropic&rsquo;s status page recorded two major incidents that affected Claude Code. The first, opened at 09:58 UTC, involved authentication issues on claude.ai and Claude Code and was marked resolved at 11:58 UTC. The second, opened at 13:09 UTC, involved elevated errors on claude.ai, the Claude API, and Claude Code and was marked resolved at 15:38 UTC. Those incidents are closed. As of Nov 17, 2026, Claude Code and the Claude API were listed as operational. Always check the live status page; do not assume an older incident is still happening.</p>
+    <p>If Claude Code is unavailable, or you have hit a usage limit and need to keep working, these are the other coding agents already on TierStack. This is an editorial switch list, not a claim that any of them was unaffected or is &ldquo;better&rdquo; because of an outage. Check each vendor&rsquo;s own status page and official pricing.</p>
+    <ul>
+      <li><strong>Cursor</strong> &mdash; an AI-first editor. S tier in our editorial v0 <a href="rankings.html?cat=coding-agents">coding-agents list</a>. Official site: <a href="https://cursor.com" target="_blank" rel="noopener">cursor.com</a>.</li>
+      <li><strong>OpenAI Codex</strong> &mdash; the Codex CLI and ChatGPT coding agent. Use <code>/status</code> in the CLI to see remaining usage. A tier (editorial v0). Official pricing and limits: <a href="https://learn.chatgpt.com/docs/pricing" target="_blank" rel="noopener">ChatGPT pricing</a>.</li>
+      <li><strong>GitHub Copilot</strong> &mdash; usage for premium requests is in your GitHub billing settings. A tier (editorial v0). <a href="https://docs.github.com/en/copilot/concepts/billing/copilot-requests" target="_blank" rel="noopener">GitHub docs</a>.</li>
+    </ul>
+    <p>A practical habit is to keep two agents from different vendors ready and route by task, so a limit or an outage on one does not stop the work. For plan facts and a pick per job, see <a href="cursor-vs-claude-code-vs-codex.html">Cursor vs Claude Code vs Codex</a> and <a href="coding-agents-budget.html">Best AI coding agent on a budget</a>.</p>
   </section>
 
   <section>
